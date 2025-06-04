@@ -13,5 +13,5 @@ public interface TodoRepo extends CrudRepository<Todo, Long> {
 
     @Query("SELECT new com.todo.todo1_1.dto.TodoDto(t) FROM Todo t " +
             "WHERE t.user.id = :userId")
-    List<TodoRepo> findTodoByUserId(@Param("userId") Long userId);
+    List<TodoRepo> findTodosByUserId(@Param("userId") Long userId);
 }
